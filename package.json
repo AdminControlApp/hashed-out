@@ -12,8 +12,8 @@
 	},
 	"scripts": {
 		"prepare": "simple-git-hooks",
-		"get-hash": "node-ts ./src/get-hash.ts",
-		"start": "node-ts ./src/hash.ts",
+		"create-hash": "node-ts ./src/create-hash.ts",
+		"decipher-hash": "node-ts ./src/decipher-hash.ts",
 		"test": "NODE_OPTIONS=--experimental-vm-modules jest",
 		"lint": "eslint --cache --fix .",
 		"prettier": "prettier --write src",
@@ -55,6 +55,7 @@
 		"bcrypt": "^5.0.1",
 		"inquirer": "^8.2.0",
 		"prompts": "^2.4.2",
-		"succ-js": "^1.0.2"
+		"succ-js": "^1.0.2",
+		"sync-index": "^1.0.5"
 	}
 }
