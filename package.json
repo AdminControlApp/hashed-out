@@ -1,7 +1,7 @@
 {
-	"name": "hasher",
+	"name": "hashed-out",
 	"version": "1.0.0",
-	"main": "dist/index.js",
+	"main": "index.js",
 	"type": "module",
 	"license": "MIT",
 	"prettier": "@leonzalion/configs/prettier",
