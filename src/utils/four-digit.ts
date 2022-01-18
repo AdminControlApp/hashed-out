@@ -1,6 +1,7 @@
 import process from 'node:process';
 import bcrypt from 'bcrypt';
 import inquirer from 'inquirer';
+import consoleClear from 'console-clear';
 
 export async function decipherHash() {
 	const { rawHash } = await inquirer.prompt<{ rawHash: string }>([
@@ -44,6 +45,6 @@ export async function createHash() {
 		throw new Error('password must be 4 numbers');
 	}
 
-	console.clear();
+	consoleClear();
 	console.log(await bcrypt.hash(password, 15));
 }
