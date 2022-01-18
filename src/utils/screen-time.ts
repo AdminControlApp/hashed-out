@@ -7,6 +7,7 @@ export async function decipherHash() {
 		{
 			name: 'rawHash',
 			type: 'input',
+			message: 'Enter the hash:'
 		},
 	]);
 
@@ -30,6 +31,7 @@ export async function createHash() {
 	const { rawPassword } = await inquirer.prompt<{ rawPassword: string }>([
 		{
 			name: 'rawPassword',
+			message: 'Enter a 4-digit password:',
 			type: 'input',
 		},
 	]);
