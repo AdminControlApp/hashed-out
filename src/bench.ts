@@ -12,6 +12,7 @@ const hash = await bcrypt.hash('pod', 10);
 
 for (const str of possibleStrings) {
 	console.log(str);
+	// eslint-disable-next-line no-await-in-loop
 	await bcrypt.compare(str, hash);
 }
 

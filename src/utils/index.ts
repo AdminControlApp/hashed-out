@@ -1,1 +1,1 @@
-export * from './screen-time.js';
+export * from './four-digit.js';
