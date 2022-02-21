@@ -21,7 +21,7 @@
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^15.0.0",
-		"@leonzalion/configs": "^1.0.64",
+		"@leonzalion/configs": "^1.0.66",
 		"@types/bcrypt": "^5.0.0",
 		"@types/inquirer": "^8.2.0",
 		"@types/jest": "^27.0.3",
