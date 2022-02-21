@@ -1,4 +1,3 @@
-import process from 'node:process';
 import bcrypt from 'bcrypt';
 import inquirer from 'inquirer';
 import consoleClear from 'console-clear';
@@ -8,24 +7,30 @@ export async function decipherHash() {
 		{
 			name: 'rawHash',
 			type: 'input',
-			message: 'Enter the hash:'
+			message: 'Enter the hash:',
 		},
 	]);
 
 	const hash = rawHash.trim();
 
-	await Promise.all(
-		[...Array.from({ length: 10_000 }).keys()].map(async (i) => {
-			const passwordString = i.toString().padStart(4, '0');
-			if (await bcrypt.compare(passwordString, hash)) {
-				console.log(passwordString);
-				// eslint-disable-next-line unicorn/no-process-exit
-				process.exit(0);
-			}
-		})
-	);
+	try {
+		// eslint-disable-next-line no-use-extend-native/no-use-extend-native
+		const password = await Promise.any(
+			[...Array.from({ length: 10_000 }).keys()].map(async (i) => {
+				const passwordString = i.toString().padStart(4, '0');
+				if (await bcrypt.compare(passwordString, hash)) {
+					return passwordString;
+				} else {
+					console.log(`Tried password ${i}, failed.`);
+					return Promise.reject();
+				}
+			})
+		);
 
-	console.log('no hash found :(');
+		return password;
+	} catch {
+		throw new Error('No hash found.');
+	}
 }
 
 export async function createHash() {
@@ -42,9 +47,9 @@ export async function createHash() {
 		password.length !== 4 ||
 		![...password].every((c) => c >= '0' && c <= '9')
 	) {
-		throw new Error('password must be 4 numbers');
+		throw new Error('Password must be 4 numbers');
 	}
 
 	consoleClear();
-	console.log(await bcrypt.hash(password, 15));
+	return bcrypt.hash(password, 15);
 }
