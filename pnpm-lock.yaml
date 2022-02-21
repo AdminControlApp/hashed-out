@@ -8,6 +8,7 @@ specifiers:
   '@commitlint/cli': ^16.0.0
   '@leonzalion/configs': ^1.0.66
   '@types/bcrypt': ^5.0.0
+  '@types/console-clear': ^1.1.0
   '@types/inquirer': ^8.2.0
   '@types/jest': ^27.0.3
   '@types/node': ^17.0.0
@@ -44,6 +45,7 @@ devDependencies:
   '@commitlint/cli': 16.2.1
   '@leonzalion/configs': 1.0.66_6ed5e51d80e58de29fac94601551b3d2
   '@types/bcrypt': 5.0.0
+  '@types/console-clear': 1.1.0
   '@types/inquirer': 8.2.0
   '@types/jest': 27.4.0
   '@types/node': 17.0.9
@@ -1294,6 +1296,10 @@ packages:
     resolution: {integrity: sha512-agtcFKaruL8TmcvqbndlqHPSJgsolhf/qPWchFlgnW1gECTN/nKbFcoFnvKAQRFfKbh+BO6A3SWdJu9t+xF3Lw==}
     dependencies:
       '@types/node': 17.0.9
+    dev: true
+
+  /@types/console-clear/1.1.0:
+    resolution: {integrity: sha512-5IOPQCZuRS2YYwPgbqKFcKIdn8SBVsLPzSU19nKzn+PaUwrkAkJmQiXALu1E9T0hFvsfzIJlUBu2jCTGlbg5FQ==}
     dev: true
 
   /@types/eslint/7.29.0:
