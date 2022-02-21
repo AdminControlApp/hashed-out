@@ -12,8 +12,8 @@
 	},
 	"scripts": {
 		"prepare": "lion-git-hooks",
-		"create-hash": "node-ts ./src/create-hash.ts",
-		"decipher-hash": "node-ts ./src/decipher-hash.ts",
+		"update-pass": "node-ts ./src/bin/update-pass.ts",
+		"decipher-hash": "node-ts ./src/bin/decipher-hash.ts",
 		"test": "NODE_OPTIONS=--experimental-vm-modules jest",
 		"lint": "eslint --cache --fix .",
 		"prettier": "prettier --write src",
