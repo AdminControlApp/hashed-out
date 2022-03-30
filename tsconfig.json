@@ -1,7 +1,9 @@
 {
-	"extends": "@leonzalion/configs/tsconfig/tsconfig.json",
+	"extends": "@leonzalion/configs/tsconfig.json",
 	"compilerOptions": {
-		"lib": ["es2021"],
+		"lib": [
+			"es2021"
+		],
 		"outDir": "dist",
 		"baseUrl": ".",
 		"paths": {
@@ -15,6 +17,7 @@
 		]
 	},
 	"include": [
-		"./src"
-, "test/bench.ts"	]
+		"./src",
+		"test/bench.ts"
+	]
 }

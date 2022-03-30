@@ -8,6 +8,7 @@ import isRoot from 'is-root';
 import { createHash } from '~/utils/hash.js';
 import * as bw from '~/utils/bitwarden.js';
 import * as macos from '~/utils/macos.js';
+import 'dotenv/config';
 
 if (!isRoot()) {
 	console.error('This command should be run with root.');

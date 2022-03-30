@@ -1,6 +1,10 @@
 import { Buffer } from 'node:buffer';
+import process from 'node:process';
 import { execaCommand as exec } from 'execa';
+import onetime from 'onetime';
 import type { BitwardenItem, BitwardenLoginItem } from '~/types/bitwarden.js';
+
+export const getBitwardenApiKey = onetime(() => process.env.BITWARDEN_API_KEY);
 
 export async function ensureLoggedIn() {
 	const bwProcess = await exec('bw status');

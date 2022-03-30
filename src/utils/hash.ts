@@ -14,7 +14,6 @@ export async function decipherHash() {
 	const hash = rawHash.trim();
 
 	try {
-		// eslint-disable-next-line no-use-extend-native/no-use-extend-native
 		const password = await Promise.any(
 			[...Array.from({ length: 10_000 }).keys()].map(async (i) => {
 				const passwordString = i.toString().padStart(4, '0');
@@ -22,6 +21,7 @@ export async function decipherHash() {
 					return passwordString;
 				} else {
 					console.log(`Tried password ${i}, failed.`);
+					// eslint-disable-next-line unicorn/no-useless-promise-resolve-reject
 					return Promise.reject();
 				}
 			})

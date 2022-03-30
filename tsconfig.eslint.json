@@ -6,7 +6,6 @@
 		"test",
 		"sync-index.config.cjs",
 		".eslintrc.cjs",
-		".markdownlint.js",
-		"jest.config.mjs"
+		".markdownlint.cjs"
 	]
 }
