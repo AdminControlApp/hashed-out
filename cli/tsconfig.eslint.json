@@ -1,9 +1,8 @@
 {
 	"extends": "./tsconfig.json",
 	"include": [
-		"scripts",
-		"sync-index.config.cjs",
+		"src",
+		"test",
 		".eslintrc.cjs",
-		".markdownlint.cjs"
 	]
 }

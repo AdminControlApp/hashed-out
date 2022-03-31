@@ -1,6 +1,6 @@
 /**
- * Updates the user's password and saves the hash in Bitwarden
- */
+Updates the user's password and saves the hash in Bitwarden
+*/
 
 import process from 'node:process';
 import dayjs from 'dayjs';
@@ -22,4 +22,7 @@ await bw.createItem({
 	username: 'admin',
 	password: hash,
 });
+
 await macos.changePassword(hash);
+
+

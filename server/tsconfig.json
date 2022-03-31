@@ -1,0 +1,15 @@
+{
+	"extends": "../tsconfig.json",
+	"compilerOptions": {
+		"lib": [
+			"es2021"
+		],
+		"outDir": "dist",
+		"baseUrl": ".",
+		"paths": {
+			"~/*": [
+				"./src/*"
+			]
+		}
+	}
+}
