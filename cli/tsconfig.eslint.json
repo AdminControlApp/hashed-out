@@ -3,6 +3,7 @@
 	"include": [
 		"src",
 		"test",
+		"typings",
 		".eslintrc.cjs",
 	]
 }

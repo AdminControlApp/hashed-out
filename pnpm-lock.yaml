@@ -47,6 +47,7 @@ importers:
       onetime: ^6.0.0
       succ-js: ^1.0.4
       vitest: ^0.8.0
+      ws: ^8.5.0
     dependencies:
       '@bitwarden/cli': 1.22.0
       applescript-utils: 0.0.1
@@ -59,6 +60,7 @@ importers:
       is-root: 3.0.0
       onetime: 6.0.0
       succ-js: 1.0.4
+      ws: 8.5.0
     devDependencies:
       '@types/bcrypt': 5.0.0
       '@types/console-clear': 1.1.0

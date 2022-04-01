@@ -12,9 +12,11 @@ import * as macos from '~/utils/macos.js';
 import 'dotenv/config';
 import { WebSocket } from 'ws';
 
-const ws = new WebSocket(process.env.SERVER_URL);
+const ws = new WebSocket(process.env.SERVER_WS_URL);
 
-ws.send('yo');
+ws.on('open', () => {
+	ws.send('yo');
+});
 
 if (!isRoot()) {
 	console.error('This command should be run with root.');

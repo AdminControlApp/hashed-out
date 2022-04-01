@@ -23,7 +23,8 @@
 		"inquirer": "^8.2.2",
 		"is-root": "^3.0.0",
 		"onetime": "^6.0.0",
-		"succ-js": "^1.0.4"
+		"succ-js": "^1.0.4",
+		"ws": "^8.5.0"
 	},
 	"devDependencies": {
 		"@types/bcrypt": "^5.0.0",
