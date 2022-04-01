@@ -4,6 +4,13 @@ const wss = new WebSocketServer({
 	port: 4000,
 });
 
+const app = fastify();
+
+app.get('/health', async (request, reply) => {
+	await reply.send('Operational!');
+});
+
+
 wss.on('connection', (socket) => {
 	console.debug('Connection!');
 

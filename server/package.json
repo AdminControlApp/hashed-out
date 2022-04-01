@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-	"type": "module",
+  "type": "module",
   "scripts": {
     "dev": "node-ts ./src/bin/start.ts"
   },
@@ -11,8 +11,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "dotenv": "^16.0.0",
     "fastify": "^3.27.4",
+    "fastify-formbody": "^5.2.0",
+    "onetime": "^6.0.0",
+    "ora": "^6.1.0",
+    "twilio": "^3.76.0",
     "ws": "^8.5.0"
   },
   "devDependencies": {
