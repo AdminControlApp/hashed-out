@@ -17,7 +17,7 @@
 		"test": "pnpm recursive run test",
 		"lint": "pnpm recursive run lint",
 		"prettier": "pnpm recursive run prettier",
-		"tc": "pnpm recursive run tc"
+		"typecheck": "pnpm recursive run tc"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^16.2.4",
